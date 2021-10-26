@@ -22,7 +22,7 @@ public final class MowerUpdate {
 
         Mower mower = mowerRepository.byPosition(xPosition, yPosition, facing);
 
-        GrassPlateau grassPlateau = grassPlateauRepository.search();
+        GrassPlateau grassPlateau = grassPlateauRepository.search().get();
 
         for (Order order: orders.orders()) {
             switch (order.type().order()) {

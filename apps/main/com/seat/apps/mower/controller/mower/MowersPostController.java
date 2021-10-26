@@ -8,7 +8,7 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.RedirectView;
 
 import java.io.Serializable;
 import java.util.HashMap;
@@ -24,13 +24,13 @@ public final class MowersPostController {
     }
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String init(@ModelAttribute("model") ModelMap model) {
-        model.addAttribute("grassCreated", false);
+    public String init(@ModelAttribute("grassCreated") ModelMap model) {
+        model.addAttribute("grassCreated", true);
         return "index";
     }
 
     @PostMapping(value = "/mowers", consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
-    public ModelAndView plateau(@RequestParam HashMap<String, Serializable> request) throws CommandHandlerExecutionError {
+    public RedirectView plateau(@RequestParam HashMap<String, Serializable> request) throws CommandHandlerExecutionError {
 
         String positionInputLine = request.get("position").toString().replace(" ", "");
 
@@ -51,6 +51,6 @@ public final class MowersPostController {
                 headFacing,
                 orderInputLine));
 
-        return new ModelAndView("redirect:/");
+        return new RedirectView("/");
     }
 }

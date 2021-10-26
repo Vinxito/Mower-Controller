@@ -3,28 +3,28 @@ package com.seat.grass_plateau.domain;
 import com.seat.shared.domain.AggregateRoot;
 
 public final class GrassPlateau extends AggregateRoot {
-    private final GrassPlateauX positionX;
-    private final GrassPlateauY positionY;
+    private final GrassPlateauX xSize;
+    private final GrassPlateauY ySize;
 
     public GrassPlateau() {
-        positionX = null;
-        positionY = null;
+        xSize = null;
+        ySize = null;
     }
 
-    public GrassPlateau(GrassPlateauX positionX, GrassPlateauY positionY) {
-        this.positionX = positionX;
-        this.positionY = positionY;
+    public GrassPlateau(GrassPlateauX xSize, GrassPlateauY ySize) {
+        this.xSize = xSize;
+        this.ySize = ySize;
     }
 
-    public static GrassPlateau create(GrassPlateauX positionX, GrassPlateauY positionY) {
-        return new GrassPlateau(positionX, positionY);
+    public static GrassPlateau create(GrassPlateauX xSize, GrassPlateauY ySize) {
+        return new GrassPlateau(xSize, ySize);
     }
 
-    public GrassPlateauX positionX() {
-        return positionX;
+    public GrassPlateauX xSize() {
+        return xSize;
     }
 
-    public GrassPlateauY positionY() {
-        return positionY;
+    public GrassPlateauY ySize() {
+        return ySize;
     }
 }

@@ -7,7 +7,7 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.RedirectView;
 
 import java.io.Serializable;
 import java.util.HashMap;
@@ -17,23 +17,22 @@ public final class GrassPlateauPostController {
 
     private final CommandBus commandBus;
 
-
     public GrassPlateauPostController(CommandBus commandBus) {
         this.commandBus = commandBus;
     }
 
     @PostMapping(value = "/grass_plateau", consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
-    public ModelAndView plateau(@RequestParam HashMap<String, Serializable> request) throws CommandHandlerExecutionError {
+    public RedirectView grassPlateauCreate(@RequestParam HashMap<String, Serializable> request) throws CommandHandlerExecutionError {
 
-        String firstInputLine = request.get("grassPlateau").toString();
+        String grassPlateauInputLine = request.get("grassPlateau").toString();
 
-        String xSize = String.valueOf(firstInputLine.charAt(0));
-        String ySize = firstInputLine.substring(firstInputLine.length() - 1);
+        String xSize = String.valueOf(grassPlateauInputLine.charAt(0));
+        String ySize = grassPlateauInputLine.substring(grassPlateauInputLine.length() - 1);
 
         commandBus.dispatch(new CreateGrassPlateauCommand(
                 Integer.parseInt(xSize),
                 Integer.parseInt(ySize)));
 
-        return new ModelAndView("redirect:/");
+        return new RedirectView("/");
     }
 }

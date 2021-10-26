@@ -2,7 +2,6 @@ package com.seat.apps.mower.controller.mower;
 
 import com.seat.mower.application.find.FindMowersQuery;
 import com.seat.mower.application.find.MowersResponse;
-import com.seat.shared.domain.bus.command.CommandBus;
 import com.seat.shared.domain.bus.query.QueryBus;
 import com.seat.shared.domain.bus.query.QueryHandlerExecutionError;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,8 +21,7 @@ public class MowerGetController {
     }
 
     @GetMapping("/mowers")
-    public List<HashMap<String, String>> mowersList()
-            throws QueryHandlerExecutionError {
+    public List<HashMap<String, String>> mowersList() throws QueryHandlerExecutionError {
 
         MowersResponse mowersResponse = queryBus.ask(new FindMowersQuery());
 

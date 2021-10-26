@@ -53,11 +53,11 @@ public final class Mower extends AggregateRoot {
     }
 
     private Mower validateGrassPlateauSize(MowerXPosition xPosition, MowerYPosition yPosition, GrassPlateau grassPlateau) {
-        if (!(xPosition.value() >= 0 && xPosition.value() <= grassPlateau.positionX().value())){
+        if (!(xPosition.value() >= 0 && xPosition.value() <= grassPlateau.xSize().value())){
             return new Mower(this.xPosition, yPosition, facing);
         }
 
-        if (!(yPosition.value() >= 0 && yPosition.value() <= grassPlateau.positionY().value())){
+        if (!(yPosition.value() >= 0 && yPosition.value() <= grassPlateau.ySize().value())){
             return new Mower(xPosition, this.yPosition, facing);
         }
 

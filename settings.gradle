@@ -1,0 +1,8 @@
+rootProject.name = 'mower-controller'
+
+include ':shared'
+project(':shared').projectDir = new File('src/shared')
+
+include ':mower'
+project(':mower').projectDir = new File('src/mower')
+

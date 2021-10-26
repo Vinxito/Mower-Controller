@@ -2,6 +2,7 @@
 /build/
 /gradle/
 /gen
+/.idea
 
 
 # Ignore Gradle GUI config

@@ -1,6 +1,5 @@
 package com.seat.grass_plateau.domain;
 
-import com.seat.grass_plateau.application.create.CreateMowerCommand;
 
 public final class GrassPlateauMother {
 //    public static GrassPlateau create(GrassPlateauY name, MowerPassword password) {

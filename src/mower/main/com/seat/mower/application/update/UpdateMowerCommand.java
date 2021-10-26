@@ -2,17 +2,19 @@ package com.seat.mower.application.update;
 
 import com.seat.shared.domain.bus.command.Command;
 
+import java.util.List;
+
 public final class UpdateMowerCommand implements Command {
     private final Integer xPosition;
     private final Integer yPosition;
     private final String headFacing;
-    private final String order;
+    private final List<String> orders;
 
-    public UpdateMowerCommand(Integer xPosition, Integer yPosition, String headFacing, String order) {
+    public UpdateMowerCommand(Integer xPosition, Integer yPosition, String headFacing, List<String> orders) {
         this.xPosition = xPosition;
         this.yPosition = yPosition;
         this.headFacing = headFacing;
-        this.order = order;
+        this.orders = orders;
     }
 
     public Integer xPosition() {
@@ -27,8 +29,8 @@ public final class UpdateMowerCommand implements Command {
         return headFacing;
     }
 
-    public String order() {
-        return order;
+    public List<String> orders() {
+        return orders;
     }
 
 }

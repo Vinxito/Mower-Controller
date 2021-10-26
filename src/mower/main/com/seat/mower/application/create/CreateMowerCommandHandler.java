@@ -1,6 +1,6 @@
 package com.seat.mower.application.create;
 
-import com.seat.mower.domain.CardinalPoint;
+import com.seat.mower.domain.MowerCardinalPoint;
 import com.seat.mower.domain.MowerXPosition;
 import com.seat.mower.domain.MowerYPosition;
 import com.seat.shared.domain.Service;
@@ -18,7 +18,7 @@ public final class CreateMowerCommandHandler implements CommandHandler<CreateMow
     public void handle(CreateMowerCommand command) {
         MowerXPosition xPosition = new MowerXPosition(command.xPosition());
         MowerYPosition yPosition = new MowerYPosition(command.yPosition());
-        CardinalPoint facing = CardinalPoint.fromValue(command.headFacing());
+        MowerCardinalPoint facing = MowerCardinalPoint.fromValue(command.headFacing());
 
         creator.create(xPosition, yPosition, facing);
     }

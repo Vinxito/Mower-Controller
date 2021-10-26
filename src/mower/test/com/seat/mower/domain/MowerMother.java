@@ -4,7 +4,7 @@ import com.seat.mower.application.create.CreateMowerCommand;
 
 public final class MowerMother {
 
-    public static Mower create(MowerXPosition xPosition, MowerYPosition YPosition, CardinalPoint facing) {
+    public static Mower create(MowerXPosition xPosition, MowerYPosition YPosition, MowerCardinalPoint facing) {
         return new Mower(xPosition, YPosition, facing);
     }
 

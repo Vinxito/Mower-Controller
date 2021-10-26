@@ -1,17 +1,13 @@
 package com.seat.mower.domain;
 
-import com.seat.mower.application.update.orders.Order;
-
 import java.util.List;
 
 public interface MowerRepository {
     void save(Mower item);
 
-//    void update(Mower item);
-
-    void update(Mower mower, Order order);
+    void update(MowerXPosition xPosition, MowerYPosition yPosition, MowerCardinalPoint facing, Mower mowerUpdated);
 
     List<Mower> all();
 
-    Mower byPosition(MowerXPosition xPosition, MowerYPosition yPosition, CardinalPoint facing);
+    Mower byPosition(MowerXPosition xPosition, MowerYPosition yPosition, MowerCardinalPoint facing);
 }

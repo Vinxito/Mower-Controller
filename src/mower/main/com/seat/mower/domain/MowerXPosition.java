@@ -8,4 +8,12 @@ public final class MowerXPosition extends IntValueObject {
         super(value);
     }
 
+    public static MowerXPosition moveLeft(MowerXPosition xPosition) {
+        return new MowerXPosition(xPosition.value() - 1);
+    }
+
+    public static MowerXPosition moveRight(MowerXPosition xPosition) {
+        return new MowerXPosition(xPosition.value() + 1);
+    }
+
 }

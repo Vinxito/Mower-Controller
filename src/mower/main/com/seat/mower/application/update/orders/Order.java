@@ -5,7 +5,6 @@ public class Order {
 
     private final OrderType type;
 
-
     public Order(OrderType type) {
         this.type = type;
     }
@@ -17,4 +16,5 @@ public class Order {
     public OrderType type() {
         return type;
     }
+
 }

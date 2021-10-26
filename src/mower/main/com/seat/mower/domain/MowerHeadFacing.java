@@ -6,6 +6,6 @@ public final class MowerHeadFacing extends StringValueObject {
 
     public MowerHeadFacing(String value) {
         super(value);
-        CardinalPoint.valueOf(value);
+        MowerCardinalPoint.valueOf(value);
     }
 }

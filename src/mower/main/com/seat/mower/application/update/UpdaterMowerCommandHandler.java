@@ -1,7 +1,7 @@
 package com.seat.mower.application.update;
 
-import com.seat.mower.application.update.orders.Order;
-import com.seat.mower.domain.CardinalPoint;
+import com.seat.mower.application.update.orders.Orders;
+import com.seat.mower.domain.MowerCardinalPoint;
 import com.seat.mower.domain.MowerXPosition;
 import com.seat.mower.domain.MowerYPosition;
 import com.seat.shared.domain.Service;
@@ -20,9 +20,10 @@ public final class UpdaterMowerCommandHandler implements CommandHandler<UpdateMo
     public void handle(UpdateMowerCommand command) {
         MowerXPosition xPosition = new MowerXPosition(command.xPosition());
         MowerYPosition yPosition = new MowerYPosition(command.yPosition());
-        CardinalPoint facing = CardinalPoint.fromValue(command.headFacing());
-        Order order = Order.fromValue(command.order());
+        MowerCardinalPoint facing = MowerCardinalPoint.fromValue(command.headFacing());
 
-        updater.apply(xPosition, yPosition , facing, order);
+        Orders orders = Orders.fromValue(command.orders());
+
+        updater.applyOrder(xPosition, yPosition , facing, orders);
     }
 }

@@ -4,8 +4,8 @@
     <style>
         body, input {
             font-family: Calibri, Arial;
-            margin: 0px;
-            padding: 0px;
+            margin: 5px;
+            padding: 3px;
         }
 
         #header h2 {
@@ -49,7 +49,7 @@
         }
 
         #content {
-            padding 5px;
+            padding: 5px;
             margin: 5px;
             text-align: center
         }
@@ -74,50 +74,23 @@
 
 <div id="content">
 
+    <#include "grass_plateau.ftl">
+
     <fieldset>
 
-        <legend>Create Grass platerau and Mower</legend>
-        <form name="control" action="save" method="post">
+        <legend>Add Mower</legend>
+        <form name="control" action="mowers" method="post">
 
-            X and Y Size: <input type="text" name="grassPlateau"/> <br/>
+            X,Y Position and Head Facing: <input id="mower_position" type="text" name="position" disabled /> <br/>
 
-            X,Y Position and Head Facing: <input type="text" name="position"/> <br/>
+            Orders: <input id="mower_orders" type="text" name="orders" disabled /> <br/>
 
-            Orders: <input type="text" name="orders"/> <br/>
-
-            <input type="submit" value="   Save   "/>
+            <input id="mower_button" type="submit" value="   Add   " disabled />
         </form>
     </fieldset>
 
     <br/>
-    <table class="datatable">
-        <#--        <tr>-->
-        <#--            <th>Make</th>  <th>Model</th>-->
-        <#--        </tr>-->
-        <#--        <#list model["carList"] as car>-->
-        <#--            <tr>-->
-        <#--                <td>${car.make}</td> <td>${car.model}</td>-->
-        <#--            </tr>-->
-        <#--        </#list>-->
-
-        <thead>
-        <tr>
-            <th class="py-4 px-6 bg-grey-lightest font-bold uppercase text-sm text-grey-dark border-b border-grey-light">
-                X Position
-            </th>
-            <th class="py-4 px-6 bg-grey-lightest font-bold uppercase text-sm text-grey-dark border-b border-grey-light">
-                Y Position
-            </th>
-            <th class="py-4 px-6 bg-grey-lightest font-bold uppercase text-sm text-grey-dark border-b border-grey-light">
-                Head Facing
-            </th>
-        </tr>
-        </thead>
-        <tbody id="mowers-list">
-
-        </tbody>
-    </table>
-
+    <#include "mowers_list.ftl">
 </div>
 </body>
 </html>

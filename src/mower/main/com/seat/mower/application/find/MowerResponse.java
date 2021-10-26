@@ -27,7 +27,7 @@ public final class MowerResponse implements Response {
     }
 
     public static MowerResponse fromAggregate(Mower mower) {
-        return new MowerResponse(mower.positionX().value(), mower.positionY().value(), mower.facing().value());
+        return new MowerResponse(mower.xPosition().value(), mower.yPosition().value(), mower.facing().value());
     }
 
 }

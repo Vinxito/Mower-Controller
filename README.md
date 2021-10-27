@@ -1,11 +1,11 @@
 # Best Mower Controller for Martorell Factory
 
-### [ℹ️ Introduction]()
+### [ℹ️ Introduction](https://github.com/Vinxito/Mower-Code_Challege#-Introduction)
 This is a repository for the seat:code challenge.
 
 A Mower Controller web application with DDD, Hexagonal Architecture and testing with JUnit and Mockito.
 
-### [🏁 How To Start]()
+### [🏁 How To Start](https://github.com/Vinxito/Mower-Code_Challege#-how-to-start)
 1. Install Java 11: `brew cask install corretto`
 2. Set it as your default JVM: `export JAVA_HOME='/Library/Java/JavaVirtualMachines/amazon-corretto-11.jdk/Contents/Home'`
 3. Clone this repository: `git clone https://github.com/Vinxito/Mower-Code_Challege`

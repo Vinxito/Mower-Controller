@@ -67,7 +67,7 @@ subprojects {
     }
 
     dependencies {
-        implementation 'org.springframework.boot:spring-boot-starter-web:2.1.8.RELEASE'
+        implementation 'org.springframework.boot:spring-boot-starter-web:2.2.1.RELEASE'
 
         testImplementation rootProject.sourceSets.main.output
         testImplementation 'org.springframework.boot:spring-boot-starter-test:2.2.1.RELEASE'
@@ -92,7 +92,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath('org.springframework.boot:spring-boot-gradle-plugin:2.2.1.RELEASE')
+        classpath('org.springframework.boot:spring-boot-gradle-plugin:2.2.2.RELEASE')
     }
 }
 
@@ -108,13 +108,17 @@ sourceSets {
     }
 }
 
+apply plugin: 'application'
+
+mainClassName = 'com.seat_code.apps.MowerStarter'
+
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-web:2.1.8.RELEASE'
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.2.2.RELEASE'
 
     implementation project(":shared")
     implementation project(":mower")
 
-    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.1.8.RELEASE'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.2.2.RELEASE'
     testImplementation project(":shared").sourceSets.test.output
 }
 

@@ -8,7 +8,7 @@ final class GrassPlateauGetControllerShould extends AcceptanceTestCase {
 
     @Test
     void find_any_grass_plateau() throws Exception {
-        commandBus.dispatch(new CreateGrassPlateauCommand(5,5));
+        commandBus.dispatch(new CreateGrassPlateauCommand(5, 5));
         assertBooleanResponse("/grass_plateau", 200, true);
     }
 

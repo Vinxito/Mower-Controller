@@ -14,16 +14,16 @@ public final class GrassPlateauResponse implements Response {
         this.ySize = ySize;
     }
 
+    public static GrassPlateauResponse fromAggregate(GrassPlateau grassPlateau) {
+        return new GrassPlateauResponse(grassPlateau.xSize().value(), grassPlateau.ySize().value());
+    }
+
     public Integer xSize() {
         return xSize;
     }
 
     public Integer ySize() {
         return ySize;
-    }
-
-    public static GrassPlateauResponse fromAggregate(GrassPlateau grassPlateau) {
-        return new GrassPlateauResponse(grassPlateau.xSize().value(), grassPlateau.ySize().value());
     }
 
     @Override

@@ -3,29 +3,20 @@
 
     <style>
         body, input {
-            display: flex;
-            align-items: center;
-            justify-content: center;
             font-family: Calibri, Arial;
             margin: 5px;
             padding: 3px;
         }
 
         #header h2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: white;
             background-color: #3275A8;
             height: 50px;
-            padding: 5px 0 0 5px;
+            padding: 50px;
             font-size: 20px;
-        }
-
-        .datatable {
-            margin-bottom: 5px;
-            border: 1px solid #eee;
-            border-collapse: collapse;
-            width: 400px;
-            max-width: 100%;
-            font-family: Calibri
         }
 
         .datatable th {
@@ -52,6 +43,9 @@
         }
 
         #content {
+            display: grid;
+            align-items: center;
+            justify-content: center;
             padding: 5px;
             margin: 5px;
             text-align: center
@@ -72,6 +66,7 @@
 <div id="header">
     <H2>
         SEAT:CODE - Best Mower Controller Ever
+        <img src="images/logo.jpeg" alt="" width="150px" style="padding-left: 50px;">
     </H2>
 </div>
 

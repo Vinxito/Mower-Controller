@@ -5,7 +5,8 @@ import com.seat_code.shared.domain.bus.query.QueryBus;
 import com.seat_code.shared.domain.bus.query.Response;
 import org.junit.jupiter.api.BeforeEach;
 
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 public abstract class UnitTestCase {
 

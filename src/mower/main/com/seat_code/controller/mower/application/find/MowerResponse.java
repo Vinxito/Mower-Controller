@@ -16,6 +16,10 @@ public final class MowerResponse implements Response {
         this.headFacing = headFacing;
     }
 
+    public static MowerResponse fromAggregate(Mower mower) {
+        return new MowerResponse(mower.xPosition().value(), mower.yPosition().value(), mower.facing().value());
+    }
+
     public String headFacing() {
         return headFacing;
     }
@@ -26,10 +30,6 @@ public final class MowerResponse implements Response {
 
     public Integer yPosition() {
         return yPosition;
-    }
-
-    public static MowerResponse fromAggregate(Mower mower) {
-        return new MowerResponse(mower.xPosition().value(), mower.yPosition().value(), mower.facing().value());
     }
 
     @Override

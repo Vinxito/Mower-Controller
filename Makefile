@@ -5,7 +5,7 @@ all: build
 build:
 	@./gradlew build --warning-mode all
 
-run-tests:
+test:
 	@./gradlew test --warning-mode all
 
 run:

@@ -24,6 +24,6 @@ public final class UpdateMowerCommandHandler implements CommandHandler<UpdateMow
 
         Orders orders = Orders.fromValue(command.orders());
 
-        updater.applyOrder(xPosition, yPosition , facing, orders);
+        updater.applyOrder(xPosition, yPosition, facing, orders);
     }
 }

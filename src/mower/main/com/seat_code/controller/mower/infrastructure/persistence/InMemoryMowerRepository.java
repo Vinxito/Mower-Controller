@@ -1,7 +1,7 @@
 package com.seat_code.controller.mower.infrastructure.persistence;
 
-import com.seat_code.shared.domain.Service;
 import com.seat_code.controller.mower.domain.*;
+import com.seat_code.shared.domain.Service;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -14,7 +14,7 @@ public final class InMemoryMowerRepository implements MowerRepository {
 
     @Override
     public void save(Mower mower) {
-        mowers.put(String.format("%s,%s,%s",mower.xPosition().value(), mower.yPosition().value(), mower.facing().value()), mower);
+        mowers.put(String.format("%s,%s,%s", mower.xPosition().value(), mower.yPosition().value(), mower.facing().value()), mower);
     }
 
     @Override
@@ -30,7 +30,7 @@ public final class InMemoryMowerRepository implements MowerRepository {
 
 
     public Mower byPosition(MowerXPosition xPosition, MowerYPosition yPosition, MowerCardinalPoint facing) {
-       return mowers.get(String.format("%s,%s,%s", xPosition.value(), yPosition.value(), facing.value()));
+        return mowers.get(String.format("%s,%s,%s", xPosition.value(), yPosition.value(), facing.value()));
     }
 
 }

@@ -12,8 +12,8 @@ import org.springframework.context.annotation.FilterType;
         includeFilters = @ComponentScan.Filter(type = FilterType.ANNOTATION, classes = Service.class),
         value = {"com.seat_code.*", "com.seat_code.controller.*", "com.seat_code.shared.*"}
 )
-public class MowerBackendApplication {
+public class MowerStarter {
     public static void main(String[] args) {
-        SpringApplication.run(MowerBackendApplication.class, args);
+        SpringApplication.run(MowerStarter.class, args);
     }
 }

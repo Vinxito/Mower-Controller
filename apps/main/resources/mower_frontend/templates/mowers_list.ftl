@@ -1,4 +1,3 @@
-
 <table class="datatable">
 
     <thead>

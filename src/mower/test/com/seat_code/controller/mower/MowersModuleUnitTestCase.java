@@ -1,8 +1,6 @@
 package com.seat_code.controller.mower;
 
 
-import com.seat_code.controller.grass_plateau.domain.GrassPlateau;
-import com.seat_code.controller.grass_plateau.domain.GrassPlateauRepository;
 import com.seat_code.controller.mower.domain.Mower;
 import com.seat_code.controller.mower.domain.MowerRepository;
 import com.seat_code.shared.infrastructure.UnitTestCase;
@@ -10,7 +8,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.mockito.Mockito;
 
 import java.util.List;
-import java.util.Optional;
 
 import static org.mockito.Mockito.*;
 
@@ -33,11 +30,7 @@ public abstract class MowersModuleUnitTestCase extends UnitTestCase {
         verify(repository, atLeastOnce()).save(mower);
     }
 
-    public void shouldSearchByPosition(Mower mower){
-        when(repository.byPosition(mower.xPosition(),mower.yPosition(), mower.facing())).thenReturn(mower);
-    }
-
-    public void shouldHaveUpdated(Mower mower) {
-        verify(repository, atLeastOnce()).update(mower.xPosition(),mower.yPosition(), mower.facing(), mower);
+    public void shouldSearchByPosition(Mower mower) {
+        when(repository.byPosition(mower.xPosition(), mower.yPosition(), mower.facing())).thenReturn(mower);
     }
 }

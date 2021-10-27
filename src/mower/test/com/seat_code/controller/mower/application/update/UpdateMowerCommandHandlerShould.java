@@ -8,7 +8,6 @@ import com.seat_code.controller.mower.domain.MowerMother;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.mockito.Mockito.when;
 
 final class UpdateMowerCommandHandlerShould extends MowersModuleUnitTestCase {
 

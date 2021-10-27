@@ -1,10 +1,10 @@
 package com.seat_code.controller.grass_plateau.infrastructure.persistence;
 
-import com.seat_code.shared.domain.Service;
 import com.seat_code.controller.grass_plateau.domain.GrassPlateau;
 import com.seat_code.controller.grass_plateau.domain.GrassPlateauRepository;
 import com.seat_code.controller.grass_plateau.domain.GrassPlateauXSize;
 import com.seat_code.controller.grass_plateau.domain.GrassPlateauYSize;
+import com.seat_code.shared.domain.Service;
 
 import java.util.Optional;
 

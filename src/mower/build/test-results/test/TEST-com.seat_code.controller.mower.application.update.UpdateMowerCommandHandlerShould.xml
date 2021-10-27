@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.seat_code.controller.mower.application.update.UpdateMowerCommandHandlerShould" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-10-27T17:05:48" hostname="DESKTOP-BC7GKLP.home" time="0.424">
+<testsuite name="com.seat_code.controller.mower.application.update.UpdateMowerCommandHandlerShould" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-10-27T20:38:34" hostname="DESKTOP-BC7GKLP.home" time="0.641">
   <properties/>
-  <testcase name="update_a_mower()" classname="com.seat_code.controller.mower.application.update.UpdateMowerCommandHandlerShould" time="0.424"/>
+  <testcase name="update_a_mower()" classname="com.seat_code.controller.mower.application.update.UpdateMowerCommandHandlerShould" time="0.641"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

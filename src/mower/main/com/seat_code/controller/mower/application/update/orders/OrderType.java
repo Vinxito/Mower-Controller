@@ -14,10 +14,14 @@ public enum OrderType {
 
     public static OrderType fromValue(String value) {
         switch (value) {
-            case "L": return OrderType.L;
-            case "R": return OrderType.R;
-            case "M": return OrderType.M;
-            default: return null;
+            case "L":
+                return OrderType.L;
+            case "R":
+                return OrderType.R;
+            case "M":
+                return OrderType.M;
+            default:
+                return null;
         }
     }
 

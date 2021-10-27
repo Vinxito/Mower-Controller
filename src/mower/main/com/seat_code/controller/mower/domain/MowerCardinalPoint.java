@@ -12,22 +12,23 @@ public enum MowerCardinalPoint {
         this.type = type;
     }
 
-    public String value() {
-        return type;
-    }
-
     public static MowerCardinalPoint fromValue(String value) {
         switch (value) {
-            case "N": return MowerCardinalPoint.N;
-            case "E": return MowerCardinalPoint.E;
-            case "S": return MowerCardinalPoint.S;
-            case "W": return MowerCardinalPoint.W;
-            default: return N;
+            case "N":
+                return MowerCardinalPoint.N;
+            case "E":
+                return MowerCardinalPoint.E;
+            case "S":
+                return MowerCardinalPoint.S;
+            case "W":
+                return MowerCardinalPoint.W;
+            default:
+                return N;
         }
     }
 
     public static MowerCardinalPoint fromOrdinal(Integer position) {
-       return MowerCardinalPoint.values()[position];
+        return MowerCardinalPoint.values()[position];
     }
 
     public static MowerCardinalPoint moveLeft(String value) {
@@ -50,5 +51,9 @@ public enum MowerCardinalPoint {
         }
 
         return MowerCardinalPoint.fromOrdinal(point.ordinal() + 1);
+    }
+
+    public String value() {
+        return type;
     }
 }

@@ -22,38 +22,26 @@
                 return response.json();
             })
             .then(function (grassPlateau) {
-                if (!grassPlateau) {
-                    document.getElementById("grass_plateau_text").disabled = true;
-                    document.getElementById("grass_plateau_button").disabled = true;
+                if (grassPlateau) {
+                    disableGrassPlateau();
+                    enableMower();
                 }
             });
     }
 
+    function disableGrassPlateau() {
+        document.getElementById("grass_plateau_text").disabled = true;
+        document.getElementById("grass_plateau_button").disabled = true;
+    }
+
+    function enableMower() {
+        document.getElementById("mower_position").disabled = false;
+        document.getElementById("mower_orders").disabled = false;
+        document.getElementById("mower_button").disabled = false;
+    }
 
 </script>
 
 <script>
     checkGrassPlateau("http://localhost:8080/grass_plateau");
 </script>
-<#--<script>-->
-
-<#--    function submit() {-->
-<#--        var form = document.getElementById("form-id");-->
-
-<#--        document.getElementById("grass_plateau_button").addEventListener("click", function () {-->
-<#--            form.submit();-->
-<#--        });-->
-<#--    }-->
-
-<#--    function disableGrassPlateau() {-->
-<#--        document.getElementById("grass_plateau_text").disabled = true;-->
-<#--        document.getElementById("grass_plateau_button").disabled = true;-->
-<#--    }-->
-
-<#--    function enableMower() {-->
-<#--        document.getElementById("mower_position").disabled = false;-->
-<#--        document.getElementById("mower_orders").disabled = false;-->
-<#--        document.getElementById("mower_button").disabled = false;-->
-<#--    }-->
-
-<#--</script>-->

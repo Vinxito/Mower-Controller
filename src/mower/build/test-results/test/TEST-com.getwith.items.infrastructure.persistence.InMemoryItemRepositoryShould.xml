@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.getwith.items.infrastructure.persistence.InMemoryItemRepositoryShould" tests="3" skipped="0" failures="0" errors="0" timestamp="2021-10-14T11:57:05" hostname="MBP-de-Vicente.home" time="0.106">
-  <properties/>
-  <testcase name="save_a_item()" classname="com.getwith.items.infrastructure.persistence.InMemoryItemRepositoryShould" time="0.101"/>
-  <testcase name="return_an_existing_item()" classname="com.getwith.items.infrastructure.persistence.InMemoryItemRepositoryShould" time="0.003"/>
-  <testcase name="not_return_a_non_existing_item()" classname="com.getwith.items.infrastructure.persistence.InMemoryItemRepositoryShould" time="0.001"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

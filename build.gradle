@@ -1,4 +1,3 @@
-// Common for all projects
 allprojects {
     apply plugin: 'java'
     apply plugin: 'io.spring.dependency-management'
@@ -16,16 +15,10 @@ allprojects {
         set('springCloudVersion', "Hoxton.M3")
     }
 
-    ext {
-        set('elasticsearch.version', '6.8.4')
-    }
-
     dependencies {
         implementation 'org.springframework:spring-context-support:5.2.1.RELEASE'
         implementation 'org.reflections:reflections:0.9.11'
         implementation 'no.api.freemarker:freemarker-java8:1.3.0'
-
-        // Test
         testImplementation 'org.junit.jupiter:junit-jupiter-api:5.5.2'
         testImplementation 'com.github.javafaker:javafaker:1.0.1'
         testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.5.2'
@@ -58,9 +51,8 @@ allprojects {
     }
 }
 
-// All subprojects (located in src/*)
 subprojects {
-    group = "com.seat.${rootProject.name}"
+    group = "com.seat_code.${rootProject.name}"
 
     sourceSets {
         main {
@@ -95,7 +87,6 @@ subprojects {
     }
 }
 
-// Main project (located in apps/)
 buildscript {
     repositories {
         mavenCentral()
@@ -116,15 +107,6 @@ sourceSets {
         resources { srcDirs = ['apps/test/resources'] }
     }
 }
-
-//apply plugin: 'application'
-//
-//bootJar {
-//    baseName = 'mower-controller'
-//    version = '0.0.1'
-//}
-//
-//mainClassName = 'com.seat.apps.Starter'
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web:2.1.8.RELEASE'

@@ -11,7 +11,8 @@ import java.util.Optional;
 @Service
 public final class InMemoryGrassPlateauRepository implements GrassPlateauRepository {
 
-    private GrassPlateau grassPlateau = new GrassPlateau(new GrassPlateauXSize(0),
+    private GrassPlateau grassPlateau = new GrassPlateau(
+            new GrassPlateauXSize(0),
             new GrassPlateauYSize(0));
 
     @Override

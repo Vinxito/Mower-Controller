@@ -4,6 +4,9 @@ import com.seat_code.controller.grass_plateau.domain.GrassPlateau;
 import com.seat_code.controller.grass_plateau.domain.GrassPlateauRepository;
 import com.seat_code.shared.infrastructure.UnitTestCase;
 import org.junit.jupiter.api.BeforeEach;
+import org.mockito.Mockito;
+
+import java.util.Optional;
 
 import static org.mockito.Mockito.*;
 
@@ -16,6 +19,10 @@ public abstract class GrassPlateauModuleUnitTestCase extends UnitTestCase {
         super.setUp();
 
         repository = mock(GrassPlateauRepository.class);
+    }
+
+    public void shouldSearch(GrassPlateau grassPlateau) {
+        Mockito.when(repository.search()).thenReturn(Optional.of(grassPlateau));
     }
 
     public void shouldHaveSaved(GrassPlateau grassPlateau) {

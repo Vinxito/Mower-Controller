@@ -23,4 +23,5 @@ public final class MowersResponseMother {
     public static MowersResponse empty() {
         return create(Collections.emptyList());
     }
+
 }

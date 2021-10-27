@@ -3,6 +3,9 @@
 
     <style>
         body, input {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-family: Calibri, Arial;
             margin: 5px;
             padding: 3px;

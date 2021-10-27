@@ -1,6 +1,6 @@
 package com.seat_code.apps.mower.controller.mower;
 
-import com.seat_code.controller.mower.application.find.FindMowersQuery;
+import com.seat_code.controller.mower.application.find.FindMowerQuery;
 import com.seat_code.controller.mower.application.find.MowersResponse;
 import com.seat_code.shared.domain.bus.query.QueryBus;
 import com.seat_code.shared.domain.bus.query.QueryHandlerExecutionError;
@@ -23,7 +23,7 @@ public class MowerGetController {
     @GetMapping("/mowers")
     public List<HashMap<String, String>> mowersList() throws QueryHandlerExecutionError {
 
-        MowersResponse mowersResponse = queryBus.ask(new FindMowersQuery());
+        MowersResponse mowersResponse = queryBus.ask(new FindMowerQuery());
 
         return mowersResponse.mowers().stream().map(response -> new HashMap<String, String>() {{
             put("xPosition", response.xPosition().toString());

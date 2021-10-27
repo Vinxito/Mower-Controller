@@ -1,7 +1,7 @@
 package com.seat_code.controller.mower.application.update;
 
-import com.seat_code.controller.grass_plateau.application.search.FindGrassPlateauQuery;
-import com.seat_code.controller.grass_plateau.application.search.GrassPlateauResponse;
+import com.seat_code.controller.grass_plateau.application.find.FindGrassPlateauQuery;
+import com.seat_code.controller.grass_plateau.application.find.GrassPlateauResponse;
 import com.seat_code.controller.grass_plateau.domain.GrassPlateauXSize;
 import com.seat_code.controller.grass_plateau.domain.GrassPlateauYSize;
 import com.seat_code.controller.mower.application.update.orders.Order;
@@ -25,13 +25,15 @@ public final class MowerUpdate {
 
         Mower mower = mowerRepository.byPosition(xPosition, yPosition, facing);
 
-        GrassPlateauResponse grassPlateau = queryBus.ask(new FindGrassPlateauQuery());
+        GrassPlateauResponse grassPlateauResponse = queryBus.ask(new FindGrassPlateauQuery());
 
         for (Order order: orders.orders()) {
             switch (order.type().order()) {
                 case "L": mower = mower.turnLeft(); break;
                 case "R": mower = mower.turnRight(); break;
-                case "M": mower = mower.move(new GrassPlateauXSize(grassPlateau.xSize()), new GrassPlateauYSize(grassPlateau.ySize())); break;
+                case "M": mower = mower.move(
+                        new GrassPlateauXSize(grassPlateauResponse.xSize()),
+                        new GrassPlateauYSize(grassPlateauResponse.ySize())); break;
             }
         }
 

@@ -1,7 +1,7 @@
 package com.seat_code.apps.mower.controller.grass_plateau;
 
-import com.seat_code.controller.grass_plateau.application.search.FindGrassPlateauQuery;
-import com.seat_code.controller.grass_plateau.application.search.GrassPlateauResponse;
+import com.seat_code.controller.grass_plateau.application.find.FindGrassPlateauQuery;
+import com.seat_code.controller.grass_plateau.application.find.GrassPlateauResponse;
 import com.seat_code.shared.domain.bus.command.CommandHandlerExecutionError;
 import com.seat_code.shared.domain.bus.query.QueryBus;
 import org.springframework.web.bind.annotation.GetMapping;

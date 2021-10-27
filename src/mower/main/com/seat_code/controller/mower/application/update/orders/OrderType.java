@@ -1,5 +1,6 @@
 package com.seat_code.controller.mower.application.update.orders;
 
+
 public enum OrderType {
     L("L"),
     R("R"),
@@ -18,6 +19,10 @@ public enum OrderType {
             case "M": return OrderType.M;
             default: return null;
         }
+    }
+
+    public static OrderType fromOrdinal(Integer position) {
+        return OrderType.values()[position];
     }
 
     public String order() {

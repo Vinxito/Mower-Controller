@@ -1,6 +1,7 @@
 package com.seat_code.controller.mower.domain;
 
 import com.seat_code.controller.mower.application.create.CreateMowerCommand;
+import com.seat_code.controller.mower.application.update.UpdateMowerCommand;
 
 public final class MowerMother {
 
@@ -9,6 +10,14 @@ public final class MowerMother {
     }
 
     public static Mower fromRequest(CreateMowerCommand request) {
+        return create(
+                MowerXPositionMother.create(request.xPosition()),
+                MowerYPositionMother.create(request.yPosition()),
+                MowerHeadFacingMother.create(request.headFacing())
+        );
+    }
+
+    public static Mower update(UpdateMowerCommand request) {
         return create(
                 MowerXPositionMother.create(request.xPosition()),
                 MowerYPositionMother.create(request.yPosition()),

@@ -17,14 +17,14 @@ final class CreateGrassPlateauCommandHandlerShould extends GrassPlateauModuleUni
         handler = new CreateGrassPlateauCommandHandler(new GrassPlateauCreator(repository));
     }
 
-//    @Test
-//    void create_a_grass_plateau() {
-//        CreateGrassPlateauCommand command = CreateGrassPlateauCommandMother.random();
-//
-//        GrassPlateau mower = GrassPlateauMother.fromRequest(command);
-//
-//        handler.handle(command);
-//
-//        shouldHaveSaved(mower);
-//    }
+    @Test
+    void create_a_grass_plateau() {
+        CreateGrassPlateauCommand command = CreateGrassPlateauCommandMother.random();
+
+        GrassPlateau grassPlateau = GrassPlateauMother.fromRequest(command);
+
+        handler.handle(command);
+
+        shouldHaveSaved(grassPlateau);
+    }
 }

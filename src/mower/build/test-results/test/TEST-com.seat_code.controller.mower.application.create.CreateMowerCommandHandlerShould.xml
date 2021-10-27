@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.seat_code.controller.mower.application.create.CreateMowerCommandHandlerShould" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-10-27T21:11:28" hostname="DESKTOP-BC7GKLP.home" time="0.007">
-  <properties/>
-  <testcase name="create_a_mower()" classname="com.seat_code.controller.mower.application.create.CreateMowerCommandHandlerShould" time="0.007"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

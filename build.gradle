@@ -52,7 +52,7 @@ allprojects {
 }
 
 subprojects {
-    group = "com.seat_code.${rootProject.name}"
+    group = "com.vinxito.${rootProject.name}"
 
     sourceSets {
         main {
@@ -110,7 +110,7 @@ sourceSets {
 
 apply plugin: 'application'
 
-mainClassName = 'com.seat_code.apps.MowerStarter'
+mainClassName = 'com.vinxito.apps.MowerStarter'
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web:2.2.2.RELEASE'

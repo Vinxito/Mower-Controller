@@ -1,9 +1,7 @@
-<img src="https://hackercar.com/wp-content/uploads/2019/07/logo-del-Seat-Code-JPG-1024x638.jpg" style="width:512px;height:319px;">
-
-# Best Mower Controller for Martorell Factory
+# Best Mower Controller Project
 
 ### [ℹ️ Introduction](https://github.com/Vinxito/Mower-Code_Challege#-Introduction)
-This is a repository for the seat:code challenge.
+This is a repository for the Mower Controller Project.
 
 A Mower Controller web application with DDD, Hexagonal Architecture and testing with JUnit and Mockito.
 
